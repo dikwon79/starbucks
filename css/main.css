@@ -4,6 +4,7 @@ body{
     font-weight: 400;
     line-height: 1.4;
     font-family: "Nanum Gothic", sans-serif;
+    height: 3000px;
 }
 
 img{
@@ -22,6 +23,10 @@ a{
 header{
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
+    /* position: relative; */  
+    position: fixed;  /*fixed로 하면 가로 너비가 최대한 줄어들려고 시도를 한다 auto설정시 */
+    top: 0;
+    width: 100%;  /*auto로하면 안되고 100%라 하면 가로 너비를 최대한 많이 사용하도록 한다.*/
 }
 
 header > .inner{
@@ -202,4 +207,19 @@ header .main-menu .item .item__contents .contents__texture h4{
 header .main-menu .item .item__contents .contents__texture p{
     color: #669900;
     margin: 4px 0 14px;  /*top, left right, bottom */
+}
+
+header .badges{
+    position: absolute;
+    top: 132px;
+    right: 12px;
+
+}
+header .badges .badge{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.15);
+    /* x축, y축, blur, 검정색(0,0,0), 투명도 */
+    cursor: pointer;
 }
